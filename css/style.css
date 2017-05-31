@@ -34,9 +34,6 @@ body {
 
 .content-container {
     width: 45%;
-    -webkit-box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
-    -moz-box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
-    box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
 }
 
 .header-container,
@@ -63,6 +60,9 @@ header.page-title {
     margin-top: 100px;
     height: 230px;
     overflow: hidden;
+  -webkit-box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
 }
 
 
@@ -131,9 +131,24 @@ blockquote {
 
 .buttons-div::after {
     content: '';
+    display: block;
     clear: both;
 }
 
+
+footer {
+  width: 100%;
+  margin-top: 150px;
+  height: 50px;
+  background-color: #37505C;
+  color: #E5E6E4;
+  text-align: center;
+}
+
+.footer-element{
+  padding-top: 15px;
+  
+}
 
 
 @media (max-width: 800px) {
