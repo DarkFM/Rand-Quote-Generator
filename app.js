@@ -1,10 +1,22 @@
 // used jsonp so this is the name of the returned function
+
+var variables = {
+    quoteText: '',
+    quoteAuthor: ''
+}
 function callBack(json) {
+    variables.quoteText = json.quoteText;
+    variables.quoteAuthor = json.quoteAuthor;
+
+    if (!variables.quoteAuthor) {
+        variables.quoteAuthor = "Unknown Person";
+    }
     var quote = `<div class="newQuote">
-                    <p class="quotes"> ${json.quoteText} </p>
-                    <blockquote> ${json.quoteAuthor} </blockquote>
+                    <p class="quotes"> ${variables.quoteText} </p>
+                    <blockquote> - ${variables.quoteAuthor} </blockquote>
                 </div>`
-    $(".quotes-container").html(quote);
+
+    $(".quotes-container").html(quote).fadeIn(1000);
 }
 
 function getQuote() {
@@ -24,15 +36,18 @@ function getQuote() {
     });
 }
 
-// run the web app
+// ****************    run the web app
 
 $(document).ready(function() {
     getQuote(); 
     
     $('.quote-button').click(function () {
-        $(".newQuote").fadeOut(3000);
         getQuote();
-        $(".newQuote").fadeIn(3000);
-        
-    });   
+    });  
+
+    $(".tweet-button").on('click', function () {
+        var attrValue = "https://twitter.com/intent/tweet?text=" +
+                        variables.quoteText + "\n - " + variables.quoteAuthor; 
+       $(".tweet-button").attr('href', attrValue);
+    });
 });

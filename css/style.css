@@ -1,3 +1,8 @@
+/*
+font-family: 'BioRhyme', serif;
+font-family: 'Cormorant SC', serif;
+*/
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +11,10 @@
 
 body {
     background-color: #FFEAD0;
+    background-color: #F0F4F6;
+    
     color: #113537;
+    font-family: 'BioRhyme', serif;
 }
 
 .lg-header-bar {
@@ -15,65 +23,138 @@ body {
     background-color: #37505C;
 }
 
-.container {
-    width: 40%;
+.header-container {
+    width: 100%;
+    position: absolute;
+    color: #E5E6E4;
+    height: 6em;
+    top: 6.5em;
+
 }
 
 .content-container {
     width: 45%;
 }
 
-.container,
+.header-container,
 .content-container {
     margin: 0 auto;
     text-align: center;
 }
 
 header.page-title {
-    position: relative;
-    /*font-size: 30px;*/
-    color: #E5E6E4;
+    /*position: absolute;*/
+    width: fit-content;
     background-color: #54422F;
-    height: 5em;
-    top: -2.5em;
-    padding-top: 20px;
+    font-size: 1.4em;
+    margin: 0 auto;
+    padding: 20px;
     -webkit-box-shadow: 5px 8px 11px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 8px 11px -3px rgba(0,0,0,0.75);
     box-shadow: 5px 8px 11px -3px rgba(0,0,0,0.75);
+
 }
 
 
-.desciption-box {
+/*.desciption-box {
     padding: 20px;
-    /*height: 6em;*/
-    font-size: 1.2em;
-    text-align: justify;
+    margin-top: 80px;
+    font-size: 1.1em;
+    text-align: left;
     background-color: #eee;
     color: #0E1428;
-    border: 1px solid black;
-}
+
+}*/
 
 .quotes-container {
     background-color: #DEECF6;
+    margin-top: 100px;
+    height: 230px;
+    overflow: hidden;
+    /*transition: all ease 3s;*/
 }
 
 
 .newQuote {
     margin: 20px 0;
-    /*height: 4em;*/
-    /*font-size: 22px;*/
+    /*border: 1px dashed blue;*/
+
 }
 
 p.quotes {
-    font-size: 23px;
-    letter-spacing: 2px;
-    height: 200px;
-    padding: 10px 5px;
-    border: 1px solid red;
+    /*font-size: i;*/
+    letter-spacing: 1.5px;
+    text-align: left;
+    /*height: 200px;*/
+    padding: 10px 15px;
+    /*border: 1px solid red;*/
 }
 
 blockquote {
     font-size: 16px;
     margin-top: 15px;
     height: 30px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+
+.button {
+    padding: 10px 20px;
+    float: left;
+    /*margin-right: 20%;*/
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #2B2D42;
+    color: #F0F4F6;
+    -webkit-box-shadow: 10px 10px 29px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 29px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 29px -6px rgba(0,0,0,0.75);
+}
+
+.button:hover {
+    background-color: #787986;
+    color: #2B2D42;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #304053;
+    color: #F0F4F6;
+    -webkit-box-shadow: inset 10px 10px 29px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 10px 10px 29px -6px rgba(0,0,0,0.75);
+    box-shadow: inset 10px 10px 29px -6px rgba(0,0,0,0.75);   
+}
+
+.button:focus{
+    outline: 0;
+}
+
+.tweet-button {
+    float: right;
+    background-color: #118AB2;
+}
+
+.tweet-button:hover {
+    background-color: #51A9C7;
+}
+
+.buttons-div {
+    margin-top: 20px;
+}
+
+.buttons-div::after {
+    content: '';
+    clear: both;
+}
+
+
+
+@media (max-width: 800px) {
+
+    .quotes-container {
+        height: 280px;
+    }
+
 }
