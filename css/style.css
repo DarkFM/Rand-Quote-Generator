@@ -34,6 +34,9 @@ body {
 
 .content-container {
     width: 45%;
+    -webkit-box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
+    box-shadow: 4px 3px 57px -12px rgba(0,0,0,0.75);
 }
 
 .header-container,
@@ -55,39 +58,22 @@ header.page-title {
 
 }
 
-
-/*.desciption-box {
-    padding: 20px;
-    margin-top: 80px;
-    font-size: 1.1em;
-    text-align: left;
-    background-color: #eee;
-    color: #0E1428;
-
-}*/
-
 .quotes-container {
     background-color: #DEECF6;
     margin-top: 100px;
     height: 230px;
     overflow: hidden;
-    /*transition: all ease 3s;*/
 }
 
 
 .newQuote {
     margin: 20px 0;
-    /*border: 1px dashed blue;*/
-
 }
 
 p.quotes {
-    /*font-size: i;*/
     letter-spacing: 1.5px;
     text-align: left;
-    /*height: 200px;*/
     padding: 10px 15px;
-    /*border: 1px solid red;*/
 }
 
 blockquote {
@@ -102,7 +88,6 @@ blockquote {
 .button {
     padding: 10px 20px;
     float: left;
-    /*margin-right: 20%;*/
     border: none;
     border-radius: 20px;
     text-decoration: none;

@@ -4,6 +4,7 @@ var variables = {
     quoteText: '',
     quoteAuthor: ''
 }
+
 function callBack(json) {
     variables.quoteText = json.quoteText;
     variables.quoteAuthor = json.quoteAuthor;
@@ -16,11 +17,11 @@ function callBack(json) {
                     <blockquote> - ${variables.quoteAuthor} </blockquote>
                 </div>`
 
-    $(".quotes-container").html(quote).fadeIn(1000);
+    $(".quotes-container").html(quote);
 }
 
 function getQuote() {
-    var number = Math.random()*10000;
+    var number = Math.random()*100000;
     $.ajax({
         type: 'GET',
         url: "http://api.forismatic.com/api/1.0/",
